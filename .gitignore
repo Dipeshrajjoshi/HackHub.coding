@@ -1,0 +1,43 @@
+*.py[cod]
+__pycache__/
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.env
+.venv
+venv/
+ENV/
+db.sqlite3
+.DS_Store
+logs/
+*.log
+media/
+staticfiles/
+.idea/
+.vscode/
+
+# Sensitive Project Documentation
+setup_git.sh
+run.sh
+
+# Test and Log Files
+contact_messages.txt
+logs/
+*.log
+
+# Environment Variables
+.env
