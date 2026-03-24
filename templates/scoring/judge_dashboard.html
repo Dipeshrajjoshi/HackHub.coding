@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Judge Dashboard - HackHub-Code{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="page-header">
+        <h1><i class="bi bi-clipboard-check me-2 text-accent"></i>Judge Dashboard</h1>
+        <p style="color:var(--text-muted);">Select a contest to review and score submissions.</p>
+    </div>
+
+    {% if contests %}
+    <div class="row g-4">
+        {% for contest in contests %}
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 style="font-weight:700;">{{ contest.title }}</h5>
+                        <span class="status-badge status-{{ contest.status|lower }}">
+                            <span class="status-dot"></span>{{ contest.status }}
+                        </span>
+                    </div>
+                    <div class="contest-card-meta mt-3">
+                        <span><i class="bi bi-people"></i> {{ contest.submissions.count }} Submission{{
+                            contest.submissions.count|pluralize }}</span>
+                        <span><i class="bi bi-calendar-x"></i> {{ contest.end_time|date:"M d, Y" }}</span>
+                    </div>
+                </div>
+                <div class="card-footer bg-transparent border-0 pt-0 pb-3 px-4">
+                    <a href="{% url 'judge_contest_submissions' contest.pk %}" class="btn btn-outline-primary btn-sm">
+                        <i class="bi bi-list-check me-1"></i>View Submissions
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <div class="empty-state-icon"><i class="bi bi-clipboard"></i></div>
+        <h4>No contests available</h4>
+        <p>No published contests found for evaluation.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
