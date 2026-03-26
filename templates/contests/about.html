@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About Us - HACKHUB-CODE{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <!-- Project Vision & Philosophy -->
+            <div class="text-center mb-5">
+                <h1 style="font-weight:800; font-size:3rem; letter-spacing:-1px;">The Story of <span class="hero-gradient">HACKHUB-CODE</span></h1>
+                <p class="lead mt-3 mx-auto" style="color:var(--text-muted); max-width:800px;">
+                    LeetCode, HackerRank, and GitHub provide different types of challenges, but they are separate from each other. HACKHUB-CODE brings these platforms together. Our goal is to give organizers a central place to run contests. They can use problems from LeetCode, HackerRank, Codeforces, and GitHub repositories all in one place for participants.
+                </p>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100 p-4" style="background:rgba(108,99,255,0.05); border:1px solid rgba(108,99,255,0.2);">
+                        <h4 style="font-weight:700;"><i class="bi bi-layers-half me-2 text-primary"></i>Merged Ecosystem</h4>
+                        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+                            Why limit a contest to just one site? With HACKHUB-CODE, an organizer can pick one problem from LeetCode, another from HackerRank, and a third from a specific GitHub repo. Participants no longer need to navigate multiple platforms; they find everything they need in a single, unified interface.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100 p-4" style="background:rgba(0,212,170,0.05); border:1px solid rgba(0,212,170,0.2);">
+                        <h4 style="font-weight:700;"><i class="bi bi-shield-check me-2 text-accent"></i>Manual Governance</h4>
+                        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+                            We don't believe in rigid, automated grading that penalizes a missing semicolon. Our platform empowers human judges to evaluate logic, code architecture, and problem-solving creativity, providing participants with nuanced, professional feedback.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Section -->
+            <div class="mt-5">
+                <div class="text-center mb-5">
+                    <h2 style="font-weight:800;"><i class="bi bi-people-fill me-2 text-accent"></i>Meet our Team of Contributors</h2>
+                    <p style="color:var(--text-muted);">The developers behind the 2026 Winter Project.</p>
+                </div>
+
+                <div class="row g-4 d-flex justify-content-center">
+                    <!-- Contributor 1: Monisha -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 p-2 text-center contributor-card">
+                            <div class="mb-3 pt-2">
+                                <img src="{% static 'images/team/monisha.jpg' %}" 
+                                     alt="Monisha Thandavamoorthy" class="rounded-circle mb-3 border border-dark border-3 shadow-sm" style="width:100px; height:100px; object-fit:cover;">
+                            </div>
+                            <h5 style="font-weight:700; font-size:1rem; margin-bottom:0.5rem;">Monisha Thandavamoorthy</h5>
+                            <div class="badge-container mb-3">
+                                <span class="badge bg-primary rounded-pill d-block py-2 px-1" style="font-size:0.6rem; letter-spacing:1px;">SOFTWARE DEVELOPER</span>
+                            </div>
+                            <div class="contributor-info text-start small mt-auto">
+                                <p class="mb-1" style="font-size:0.75rem;"><strong>ID:</strong> 110198417</p>
+                                <p class="mb-0" style="font-size:0.75rem;"><strong>Email:</strong> thandav@uwindsor.ca</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contributor 2: Dipesh -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 p-2 text-center contributor-card">
+                            <div class="mb-3 pt-2">
+                                <img src="{% static 'images/team/dipesh.jpg' %}" 
+                                     alt="Dipesh Raj Joshi" class="rounded-circle mb-3 border border-dark border-3 shadow-sm" style="width:100px; height:100px; object-fit:cover;">
+                            </div>
+                            <h5 style="font-weight:700; font-size:1rem; margin-bottom:0.5rem;">Dipesh Raj Joshi</h5>
+                            <div class="badge-container mb-3">
+                                <span class="badge bg-primary rounded-pill d-block py-2 px-1" style="font-size:0.6rem; letter-spacing:1px;">SOFTWARE DEVELOPER</span>
+                            </div>
+                            <div class="contributor-info text-start small mt-auto">
+                                <p class="mb-1" style="font-size:0.75rem;"><strong>ID:</strong> 110192512</p>
+                                <p class="mb-0" style="font-size:0.75rem;"><strong>Email:</strong> joshi6k@uwindsor.ca</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contributor 3: Kamraan -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 p-2 text-center contributor-card">
+                            <div class="mb-3 pt-2">
+                                <img src="{% static 'images/team/kamraan.jpg' %}" 
+                                     alt="Kamraan Ahmed" class="rounded-circle mb-3 border border-dark border-3 shadow-sm" style="width:100px; height:100px; object-fit:cover;">
+                            </div>
+                            <h5 style="font-weight:700; font-size:1rem; margin-bottom:0.5rem;">Kamraan Ahmed</h5>
+                            <div class="badge-container mb-3">
+                                <span class="badge bg-primary rounded-pill d-block py-2 px-1" style="font-size:0.6rem; letter-spacing:1px;">SOFTWARE DEVELOPER</span>
+                            </div>
+                            <div class="contributor-info text-start small mt-auto">
+                                <p class="mb-1" style="font-size:0.75rem;"><strong>ID:</strong> 110192211</p>
+                                <p class="mb-0" style="font-size:0.75rem;"><strong>Email:</strong> ahmed5o1@uwindsor.ca</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contributor 4: Vamsi -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="card h-100 p-2 text-center contributor-card">
+                            <div class="mb-3 pt-2">
+                                <img src="{% static 'images/team/vamsi.jpg' %}" 
+                                     alt="Vamsi Krishna Nallani" class="rounded-circle mb-3 border border-dark border-3 shadow-sm" style="width:100px; height:100px; object-fit:cover;">
+                            </div>
+                            <h5 style="font-weight:700; font-size:1rem; margin-bottom:0.5rem;">Vamsi Krishna Nallani</h5>
+                            <div class="badge-container mb-3">
+                                <span class="badge bg-primary rounded-pill d-block py-2 px-1" style="font-size:0.6rem; letter-spacing:1px;">SOFTWARE DEVELOPER</span>
+                            </div>
+                            <div class="contributor-info text-start small mt-auto">
+                                <p class="mb-1" style="font-size:0.75rem;"><strong>ID:</strong> 110191887</p>
+                                <p class="mb-0" style="font-size:0.75rem;"><strong>Email:</strong> nallaniv@uwindsor.ca</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-5 p-4 text-center" style="opacity:0.6; font-size:0.85rem;">
+                    <p class="mb-0 italic border-top pt-3">
+                        HACKHUB-CODE is an open research project submitted for the Internet Applications (COMP-8347) course under the supervision of the Department of Computer Science.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .contributor-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid var(--border-light);
+        background: rgba(255,255,255,0.02);
+        display: flex;
+        flex-direction: column;
+    }
+    .contributor-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        border-color: var(--accent);
+    }
+    .badge-container {
+        min-height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contributor-info {
+        background: rgba(0,0,0,0.2);
+        padding: 10px;
+        border-radius: 8px;
+        color: var(--text-muted);
+        width: 100%;
+    }
+    .badge {
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+</style>
+{% endblock %}
