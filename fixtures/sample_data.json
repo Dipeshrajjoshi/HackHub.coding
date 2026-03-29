@@ -1,0 +1,1800 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 3,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 3,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 3,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 3,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 2,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 2,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 2,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 2,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 6,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 6,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 6,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 6,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add contest",
+    "content_type": 7,
+    "codename": "add_contest"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change contest",
+    "content_type": 7,
+    "codename": "change_contest"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete contest",
+    "content_type": 7,
+    "codename": "delete_contest"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view contest",
+    "content_type": 7,
+    "codename": "view_contest"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add problem link",
+    "content_type": 8,
+    "codename": "add_problemlink"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change problem link",
+    "content_type": 8,
+    "codename": "change_problemlink"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete problem link",
+    "content_type": 8,
+    "codename": "delete_problemlink"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view problem link",
+    "content_type": 8,
+    "codename": "view_problemlink"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add submission",
+    "content_type": 9,
+    "codename": "add_submission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change submission",
+    "content_type": 9,
+    "codename": "change_submission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete submission",
+    "content_type": 9,
+    "codename": "delete_submission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view submission",
+    "content_type": 9,
+    "codename": "view_submission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add score",
+    "content_type": 10,
+    "codename": "add_score"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change score",
+    "content_type": 10,
+    "codename": "change_score"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete score",
+    "content_type": 10,
+    "codename": "delete_score"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view score",
+    "content_type": 10,
+    "codename": "view_score"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add contact message",
+    "content_type": 11,
+    "codename": "add_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change contact message",
+    "content_type": 11,
+    "codename": "change_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete contact message",
+    "content_type": 11,
+    "codename": "delete_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view contact message",
+    "content_type": 11,
+    "codename": "view_contactmessage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "accounts",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "contests",
+    "model": "contest"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "contests",
+    "model": "problemlink"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "submissions",
+    "model": "submission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "scoring",
+    "model": "score"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "contests",
+    "model": "contactmessage"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0u9nqjuv6ek4p1jhi5zw647la4ahfthf",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm7seMPJT1niNbeNQ6gWMqnQtwdIqWA9s3Me6mBtrUO2yLzMLI6K-zV6XdMlB8y7YTvNN2azm1a5zHpXdEHXfS1sTwvh_t3UGmp3zoFZHFii8cSKAaOhiBaLNaQcLQWELjvxHmPLjsPEoLpHDiEvnhO6v0BAWU3VQ:1w4iA6:2e6EYbXJpp9ocEyfdInksWqNrHlBnUohfC4hkGkcCng",
+    "expire_date": "2026-04-06T16:29:54.857Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cevd7fzyt8hyccsszr8ro037rgdzrtr0",
+  "fields": {
+    "session_data": "eyJyZWNlbnRfY29udGVzdHMiOlsxXSwidmlzaXRfc3RhdHMiOnsiMjAyNi0wMy0yOCI6MX19:1w6cO7:RD9CzjOB66jpYYgOjIcx8HUw_7_W54HTtQT2VKslqL4",
+    "expire_date": "2026-04-11T22:44:15.267Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "k7acwtobc59uj2r8fjwlfs0ceyrxqj18",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSGlA1hcuu83kJlhkKqBpI-V8d-1SRe6veec-1IRt7XEbZE5TkldlAnq9DsS8kPqTtId661pbnWdJ9K7og-66LEleV4P9--g4FK-NXlEExwbJwKduOzYghfkNAyQg0CPnhA7OLP4jjNAJiEGn8VSH6x6fwAycDlQ:1w4iD2:m8XefDlSqJ2YIE5LvCvfGPMMzOEQE5odSXB0EvCgB8U",
+    "expire_date": "2026-04-06T16:32:56.032Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lgz0u4j2vf5pmhj51zq0548ym9v8x0gd",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAJMIhL956BzMCMVA1NSrtqvLtt0oVu_3vvryrhMte0dJ7SUNRVmaBOvyNhfnHbSXlie4w6j22eBtK7og_a9X0s_L4d7t9BxV63GgBcDCQX8pGkhEzMFgOCF3Dn6AFNFkZ2KJF8NgatkLdlwxFdBPX5Ai3DORM:1w4iD1:wjFLQrg_hxZlQE748zfPtrV9CURIm6O0jN4jqYXkM0c",
+    "expire_date": "2026-04-06T16:32:55.234Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m6j5jxvd6y7dssaboom0xficcq2xeohk",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSGDWT4p0_sMiM9ucBKBZOwqyt1jSy4STTfvzbyZD9ta_NZx8XNmVyaAXX7LGNIT60HyI9R746nVdZkjPxR-0s6nlvF1O92_gxJ62dcyKRo0KalpcAYJUY5AWQoLABbBhGhNtmkPCCSHFEiR09plHI1K7PMFEhw4nQ:1w4iD0:Enltw07KP4NYtlK57KkHcf4T-rUHX4GXsIxwiIVvSM8",
+    "expire_date": "2026-04-06T16:32:54.478Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pogbxkzhng9nz4p7f9lihiv1phjyz96l",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSEdSnm4dO83kGEGpGogKe3K-O_apAvd3nPOfYmA21rC1tMSZhZnAV6cfseI9Eh1J3zHemuSWl2XOcpdkQft8to4PS-H-3dQsJdvnVghZQuOCJzl0U-Dp4yoJucsGqsZ4pgykkFSozNa-cwRBlSQnNcg3h8nCThr:1w4iAg:k-wYWFVGf-HFirDaOWPsJGvibR33AwCChRdyElzNmFQ",
+    "expire_date": "2026-04-06T16:30:30.807Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "r59aiwwg5j3s45npolj9r5fmkbz5fm1e",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAUBO_iGllx7OcPJX3OYK0_4ACypTipEHeHSCmg3ZnZF_PY1uK3nhc_J3Zmo2Cn3zEgPnLdSbqj3hqPra7LHPiu8IN2PrWUn5fD_Tso6OVbg2TQSCQI1mVxlQJRC5sMgpJaDtIqq4jCGOBAgDEg7TJpqWkwybL3B_43N3Q:1w4iD2:4OOUKxjpIvlARDnaDgT9bopJaH5fLTEE41C2t-qBiXA",
+    "expire_date": "2026-04-06T16:32:56.801Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rbyg27dxcv3qi6sm0yc4h4o3u4xobjqa",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQBe9CHSFg-Tllep8BLQsEJxGWjF1FuXuE5CJp38y8Nwt47DUcPW9hSezKpGCX3zEiPXMbJD2w3VdOa9u3JfKh8JN2Pq8pv26n-3dQsddRR-0NQQEi5zOJognBOUtKT1ZIZ1wyHqRV0qfiFGA0BqXCSVGGCJZ9vgMfN6A:1w42op:duKiPJoXW5kU9MhzPUz6NAHF3HUFcuazh6I1QZ5ZPeM",
+    "expire_date": "2026-04-04T20:21:11.747Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sijo001qr3o8jxhm80sdf0ymh096o7wn",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQBf-FsyHAQgGP3v0GAuwiVQNJaU_Gf9cmPej1zcx7sRC3tYZt0BJmZGcmFTv9jinmB7Wd4D22W-e5t3WZE98VftDBrx3peTncv4MaR_3WkJw2QliKBUBaJKmcApii1Ug2G5cyohbOWzUZB6ZQErmoonyW6KVl7w_xfjes:1w4YKE:y19jGXCQxPRiD_tB_XBTfn6UYEQaz3se7tPuB8LPTRY",
+    "expire_date": "2026-04-06T05:59:42.481Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ue3y0y8ooe4x7exqqu1pixgxrso3aaik",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnY8ZeSPmewdtcbHEC2FCcV4u4QKQW0b2beSyTY1pK2zkuas7gI5cXpd0SgB9ed5DvUW5PU6rrMKHdFHrTLsWV-Xg_376BAL9-agBDz2TAqrQea0A7ROQweYSLFnlVEZ7zVHHQ0MLhMgQwqA9lGVk68PzTgOMM:1w4iAJ:CsM8Bic1sUTnjkMyyAYbU9_HJDF6wlJE8CvkvpQKoGg",
+    "expire_date": "2026-04-06T16:30:07.456Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uq3ki5epuek7n2lcrkwcxnc6fcjj6149",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyFABaxH7_0GsrC7UjWQlPZk_HdL0oPeJvPezFsE2NYctkZLmFFchdHi9FtGSE8qneADyr3KVMu6zFF2RR60yakivW6H-3eQoeW-9oTgSOGZVYrIyrBXHpk07CkZqy3vlKwaPZADHuyFyKB3jnjUg_h8AUYlOVk:1w4iB1:jIQaPc6NHnQrRy0czWcU-0VLMfS45_CrIklECnTX0Nw",
+    "expire_date": "2026-04-06T16:30:51.392Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yvg31ai1xq41k74kem3526nh2ehpi1cs",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWk6TEfApXvO0EynjKCmTSisjHdXEha6_e-9_zKBt3UKWx2XMCdzMYDm9DtGlseYd5LunG_FSsnrMke7K_ag1Q4ljc_r4f4dTFynb63EFDX1Iq7RLnoCjwARfQRPzNi12Cm3mqgnpx4E0TUgQqIOmjOZ9wcOBDe5:1w4gmc:UvuJ2psOzwDGr1z5Bhch1NzdlNprCs2HbwZy2tTgIGE",
+    "expire_date": "2026-04-06T15:01:34.665Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "z9xpojv5jjudyv6erzdtpc043tf6u62e",
+  "fields": {
+    "session_data": ".eJxVjsFuwjAQRP9lzyayd2PHybH3fgFCljdeN2lRIsWGC-LfIRJC9Dgzb0ZzgxAvdQqXIluYEwzgQX16HMc_WfYg_cblZ23GdanbzM2ONK-0NN9rkvPXi_03MMUyPdtdy8ZFzJlSb5lQMnl22I-21anPvs2cDDrfYWaxnrizrK3DLEk7j_Qc3WSUpYb9gJRaYDgaRQpPCq5zmWsoNe7uDVCjO2g6aAcDqbc0BIO53x_IqUwf:1w0tjh:5SfSmOCIddgJi5siKP8FjG3Uk6PiZh3y3QFZkMBtw2Q",
+    "expire_date": "2026-03-27T04:02:53.118Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "zs0kuuub6isog346v6dlrw4qlolp1zch",
+  "fields": {
+    "session_data": ".eJxVjjsOgzAQRO_iGpC9C9hQps8JosjyZwkkkZGwSYO4e7BEkbRvZp5mY9qsadRrpEVPnvVMACt-oTXuRSEn_mnCY67cHNIy2SpXqjON1XX29L6c3T_BaOJ4rNGquuFckhkQhfQkQAFia2TtSbpGWed9zVUnoW0UNgNZ7gYYoHPCd0Ie0oUchaTzAYopsv4m5L1gnylOScdkMtoYcGhLjiUg6-t9_wKli0jG:1w4jse:N8qAWcDrSh9w78yE-0WyUoWgZaC4H3bPbLONdPikV2Q",
+    "expire_date": "2026-04-06T18:20:00.330Z"
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$randomsalt$hash",
+    "last_login": "2024-03-01T12:00:00Z",
+    "is_superuser": true,
+    "username": "hackhub_admin",
+    "first_name": "Admin",
+    "last_name": "User",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-03-01T12:00:00Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$GkDvONMCZZ6tEGZc70Fgx8$CD3Nxehr0wLgbEmxFdkfG7f0l+8Hy+Wp5l/ebOM5kJ4=",
+    "last_login": "2026-03-02T15:09:41.637Z",
+    "is_superuser": false,
+    "username": "participant1",
+    "first_name": "Bob",
+    "last_name": "Coder",
+    "email": "p1@hackhub.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-02T15:06:05.033Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$K6OQ2jkzs9QJvifLvlo8o6$8/Pkth26nroXNndnnYp5ucu6ZXUZbU7WYyCfft0ViXM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "participant2",
+    "first_name": "Carol",
+    "last_name": "Dev",
+    "email": "p2@hackhub.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-02T15:06:05.323Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$tpAtf2ljiWy4nbaH7XLI4I$jemFdDik+l7WNcS5sdjVIl0dHCYZF/ZSBrOMW1o4hMM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "judge1",
+    "first_name": "Dave",
+    "last_name": "Evaluator",
+    "email": "judge@hackhub.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-02T15:06:05.619Z",
+    "role": "judge",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$4njxk7msHwb3ObBN0q2WHj$x8QNpD853xisS6P+VX0HHTc37RAYRKWUq+3MvtChw94=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "judge2",
+    "first_name": "Eve",
+    "last_name": "Reviewer",
+    "email": "judge2@hackhub.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-02T15:06:05.906Z",
+    "role": "judge",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$KyzicFXtoZ0uaNJYtXG3ck$maBpf1wc9XzHN+wUmwc9DF3Wwe2uqzB7I7gWAeYc5VI=",
+    "last_login": "2026-03-12T19:36:08.604Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@hackhub.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-03-02T15:06:06.172Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$UTHn8PjFdPgDDBrd9cnQxq$UmwPG4t+8aF9G8qO7fY+PbHOE8sBuz3ZmrBn38G+gmM=",
+    "last_login": "2026-03-06T08:42:22.495Z",
+    "is_superuser": false,
+    "username": "dipesh26",
+    "first_name": "Dipesh",
+    "last_name": "Raj joshi",
+    "email": "dipeshjoshi1000@icloud.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-06T08:42:00.871Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$0sE7eNFpXFSNEx9Rr844YI$Fww+o6AePUbU3sWZ42SIRwoyAs81BK1I4kFvhKfqQvA=",
+    "last_login": "2026-03-06T08:43:57.020Z",
+    "is_superuser": false,
+    "username": "dipesh77",
+    "first_name": "dipesh",
+    "last_name": "Joshi",
+    "email": "dipeshjoshi1000@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-06T08:43:56.720Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$z2CcHk7fhu3TUJCgTpIJSZ$EfE2Q9uEUxWkpcObhJEGD21FvDlWOqUtg28LAWyvCz0=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "organizer1",
+    "first_name": "Alice",
+    "last_name": "Organizer",
+    "email": "organizer@hackhub.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-12T19:32:47.237Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$JKTrcA5xPALNwTuKcl8Pot$2YvqW82NDS6RWjBMZ1/rhIWOsjTMCCg+xsRByASFkbM=",
+    "last_login": "2026-03-21T20:21:11.746Z",
+    "is_superuser": false,
+    "username": "Dipesh11",
+    "first_name": "Dipesh",
+    "last_name": "Joshi",
+    "email": "dipeshjoshi1000@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-21T20:13:50.513Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$aibrCBkv6XjTKa5YHszLZl$mPbBcqwt70tANthMoyjpua9HXnDwi3zBlGJeEs8IzOs=",
+    "last_login": "2026-03-23T05:59:25.632Z",
+    "is_superuser": false,
+    "username": "Dipeshuser",
+    "first_name": "Dipesh",
+    "last_name": "Joshi",
+    "email": "dipeshjoshi1000@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-21T20:17:50.455Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$rMU1MhZpZBpTsGqX2e9cuR$FBWTR6xxeh5xbVCrhwkBoU3myCupzHqtc0ztW3tfSIQ=",
+    "last_login": "2026-03-23T18:17:37.483Z",
+    "is_superuser": false,
+    "username": "DipeshJudge",
+    "first_name": "Dipesh",
+    "last_name": "Joshi",
+    "email": "dipeshjoshi1000@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-21T20:18:58.714Z",
+    "role": "judge",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$ZXloljcuhaGR1dBvJCUgmy$4KB2Olc7qgmjTdMEK2qo1DLDzV00DCshTdA/a6TDfRA=",
+    "last_login": "2026-03-23T15:01:34.664Z",
+    "is_superuser": false,
+    "username": "Dipesh123",
+    "first_name": "Dipesh",
+    "last_name": "Joshi",
+    "email": "dipeshjoshi1000@icloud.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T15:01:34.364Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$hBnb4XdAnpH4RGUy5HolLy$BDpvjDVNgN6QijkTz5dvKIiXRV2Twh/WHmkrCzXfOHc=",
+    "last_login": "2026-03-23T17:49:57.662Z",
+    "is_superuser": false,
+    "username": "auditor_org",
+    "first_name": "",
+    "last_name": "",
+    "email": "org@test.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T15:05:33.890Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5Az7Xxe3gOvvIWtei7vaLw$Tz8toFDQEDmIE03SScsyL2n/krrlP59eQ8Swoajb/Qg=",
+    "last_login": "2026-03-23T16:32:54.478Z",
+    "is_superuser": false,
+    "username": "tester_part",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:29:54.335Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 16,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tester_org",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:29:54.594Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Bbwz71N7IsfMwXg8y9T3ir$4iUasV0k9oX36z4B1496/AbLdwRF3F8AN9tOxt33RfI=",
+    "last_login": "2026-03-23T16:32:55.233Z",
+    "is_superuser": false,
+    "username": "tester_part2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:30:06.926Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 18,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tester_org2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:30:07.192Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$DJamk4VhvWXDEnoZGGEwxG$2BD34rZhl25KwoXq/myR6XQRrIQiJs2K9Nh/MqJRAwg=",
+    "last_login": "2026-03-23T16:32:56.031Z",
+    "is_superuser": false,
+    "username": "tester_part3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:30:30.287Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 20,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tester_org3",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:30:30.546Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 21,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$xsyhS2af2XJJtTdxURVEtg$vvkgcsBzD/R3blKmd/I46N4xCYnYjh/XcR98+tusrZo=",
+    "last_login": "2026-03-23T16:32:56.800Z",
+    "is_superuser": false,
+    "username": "tester_judge",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:30:50.790Z",
+    "role": "judge",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 22,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tester_part4",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:30:51.112Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 23,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tester_org4",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:30:51.114Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$ipaQ7WCfOIHo1YK2cZ1Xce$frPBin8epzN86Uoy9j+nkEukYg/FwdW5fY0z4IkFGAI=",
+    "last_login": "2026-03-23T16:48:42.077Z",
+    "is_superuser": false,
+    "username": "FinalOrg",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:46:43.563Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$t65Zd5MKy4NSDkwtu043Ny$hSirVdsH9eFl7kMBfmSyCscibYWtgKblwEnRYJHR92I=",
+    "last_login": "2026-03-23T17:49:23.008Z",
+    "is_superuser": false,
+    "username": "FinalPart",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:46:43.820Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 26,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$pCzmsitHaI5zKB4TmhYOYr$HuIF9cFuKXjd5Zwr2rmVQK9RaAG7zdRRZ3d6BpDLPfc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "FinalJudge",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T16:46:44.071Z",
+    "role": "judge",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 27,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$p7P0UHLJmUthfTQw1VQ37g$j36u0cdgPL88NzpQ/XBa8UobJGs+fFuHZGJ6qLarwQU=",
+    "last_login": "2026-03-23T18:16:29.515Z",
+    "is_superuser": false,
+    "username": "VamsiUser",
+    "first_name": "Vamsi Krishna",
+    "last_name": "Nallani",
+    "email": "vamsi11@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T18:03:55.392Z",
+    "role": "participant",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$lC9F0A27lGboHwhr2VKGsH$E+5ndUv3JG8eWc++L2UAUdBIHdi6XKlXWX0uzFZBVX0=",
+    "last_login": "2026-03-23T18:06:05.124Z",
+    "is_superuser": false,
+    "username": "VamsiOrganizer",
+    "first_name": "Vamsi",
+    "last_name": "Nallani",
+    "email": "Vamsi26@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-03-23T18:06:04.827Z",
+    "role": "organizer",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 1,
+  "fields": {
+    "title": "Spring Code Jam 2026",
+    "description": "A collaborative hackathon for building innovative AI tools.",
+    "rules": "1. Be original. 2. Respect others.",
+    "start_time": "2024-04-01T09:00:00Z",
+    "end_time": "2024-04-03T18:00:00Z",
+    "created_by": 1,
+    "is_published": true,
+    "created_at": "2024-03-01T12:00:00Z",
+    "updated_at": "2024-03-01T12:00:00Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 2,
+  "fields": {
+    "title": "HackHub Summer Hackathon",
+    "description": "A 24-hour hackathon where you build and submit creative solutions to real-world problems.",
+    "rules": "1. Teams of up to 3.\n2. Use any programming language.\n3. Submit a working solution link.",
+    "start_time": "2026-03-05T15:06:06.450Z",
+    "end_time": "2026-03-06T15:06:06.450Z",
+    "created_by": 1,
+    "is_published": true,
+    "created_at": "2026-03-02T15:06:06.456Z",
+    "updated_at": "2026-03-02T15:06:06.456Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 3,
+  "fields": {
+    "title": "HackHub Winter Challenge",
+    "description": "Archived contest with full data for leaderboard exploration.",
+    "rules": "1. Individual submissions only.\n2. ZIP or GitHub links accepted.",
+    "start_time": "2026-02-20T15:06:06.450Z",
+    "end_time": "2026-02-27T15:06:06.450Z",
+    "created_by": 1,
+    "is_published": true,
+    "created_at": "2026-03-02T15:06:06.460Z",
+    "updated_at": "2026-03-02T15:06:06.460Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 4,
+  "fields": {
+    "title": "HackHub Spring Contest 2025",
+    "description": "The premier coding challenge of the season! Solve algorithmic problems and showcase your coding skills. This is a general-purpose contest open to all skill levels.",
+    "rules": "1. One submission per participant.\n2. Submit before the deadline.\n3. Solutions must be your own work.\n4. ZIP files must be under 10MB.\n5. External links must be accessible.",
+    "start_time": "2026-03-12T17:32:48.751Z",
+    "end_time": "2026-03-13T17:32:48.751Z",
+    "created_by": 9,
+    "is_published": true,
+    "created_at": "2026-03-12T19:32:48.752Z",
+    "updated_at": "2026-03-12T19:32:48.752Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 5,
+  "fields": {
+    "title": "Audit Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-23T15:29:54.595Z",
+    "end_time": "2026-03-23T17:29:54.595Z",
+    "created_by": 16,
+    "is_published": true,
+    "created_at": "2026-03-23T16:29:54.595Z",
+    "updated_at": "2026-03-23T16:29:54.595Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 6,
+  "fields": {
+    "title": "Secret Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-23T15:30:07.193Z",
+    "end_time": "2026-03-23T17:30:07.193Z",
+    "created_by": 18,
+    "is_published": false,
+    "created_at": "2026-03-23T16:30:07.193Z",
+    "updated_at": "2026-03-23T16:30:07.193Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 7,
+  "fields": {
+    "title": "Expired Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-21T16:30:30.546Z",
+    "end_time": "2026-03-22T16:30:30.546Z",
+    "created_by": 20,
+    "is_published": true,
+    "created_at": "2026-03-23T16:30:30.547Z",
+    "updated_at": "2026-03-23T16:30:30.547Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 8,
+  "fields": {
+    "title": "Future Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-24T16:30:30.548Z",
+    "end_time": "2026-03-25T16:30:30.548Z",
+    "created_by": 20,
+    "is_published": true,
+    "created_at": "2026-03-23T16:30:30.548Z",
+    "updated_at": "2026-03-23T16:30:30.548Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 9,
+  "fields": {
+    "title": "Secret Expired Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-21T16:30:51.118Z",
+    "end_time": "2026-03-22T16:30:51.118Z",
+    "created_by": 23,
+    "is_published": false,
+    "created_at": "2026-03-23T16:30:51.119Z",
+    "updated_at": "2026-03-23T16:30:51.119Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 10,
+  "fields": {
+    "title": "Audit Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-23T15:32:54.202Z",
+    "end_time": "2026-03-23T17:32:54.202Z",
+    "created_by": 16,
+    "is_published": true,
+    "created_at": "2026-03-23T16:32:54.202Z",
+    "updated_at": "2026-03-23T16:32:54.202Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 11,
+  "fields": {
+    "title": "Secret Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-23T15:32:54.973Z",
+    "end_time": "2026-03-23T17:32:54.973Z",
+    "created_by": 18,
+    "is_published": false,
+    "created_at": "2026-03-23T16:32:54.974Z",
+    "updated_at": "2026-03-23T16:32:54.974Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 12,
+  "fields": {
+    "title": "Expired Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-21T16:32:55.759Z",
+    "end_time": "2026-03-22T16:32:55.759Z",
+    "created_by": 20,
+    "is_published": true,
+    "created_at": "2026-03-23T16:32:55.759Z",
+    "updated_at": "2026-03-23T16:32:55.759Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 13,
+  "fields": {
+    "title": "Future Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-24T16:32:55.760Z",
+    "end_time": "2026-03-25T16:32:55.760Z",
+    "created_by": 20,
+    "is_published": true,
+    "created_at": "2026-03-23T16:32:55.760Z",
+    "updated_at": "2026-03-23T16:32:55.760Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 14,
+  "fields": {
+    "title": "Secret Expired Contest",
+    "description": "",
+    "rules": "",
+    "start_time": "2026-03-21T16:32:56.539Z",
+    "end_time": "2026-03-22T16:32:56.539Z",
+    "created_by": 23,
+    "is_published": false,
+    "created_at": "2026-03-23T16:32:56.539Z",
+    "updated_at": "2026-03-23T16:32:56.539Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 15,
+  "fields": {
+    "title": "E2E Final Contest",
+    "description": "Final E2E Test Contest",
+    "rules": "Solve the problems and submit.",
+    "start_time": "2026-03-06T07:03:00Z",
+    "end_time": "2026-03-23T17:46:00Z",
+    "created_by": 24,
+    "is_published": true,
+    "created_at": "2026-03-23T16:53:38.371Z",
+    "updated_at": "2026-03-23T16:58:22.433Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 16,
+  "fields": {
+    "title": "Hackathon",
+    "description": "Organized by DJ",
+    "rules": "No",
+    "start_time": "2026-03-23T17:51:00Z",
+    "end_time": "2026-03-23T17:56:00Z",
+    "created_by": 14,
+    "is_published": true,
+    "created_at": "2026-03-23T17:50:52.619Z",
+    "updated_at": "2026-03-23T17:51:05.077Z"
+  }
+},
+{
+  "model": "contests.contest",
+  "pk": 17,
+  "fields": {
+    "title": "Vamsi's Contest",
+    "description": "Coding contest",
+    "rules": "Only valid students are allowed to take test.",
+    "start_time": "2026-03-23T18:08:00Z",
+    "end_time": "2026-03-23T18:20:00Z",
+    "created_by": 28,
+    "is_published": true,
+    "created_at": "2026-03-23T18:08:44.024Z",
+    "updated_at": "2026-03-23T18:16:08.746Z"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 1,
+  "fields": {
+    "contest": 1,
+    "title": "Sort the Unsorted",
+    "url": "https://leetcode.com/problems/sort-an-array/",
+    "platform": "leetcode"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 2,
+  "fields": {
+    "contest": 1,
+    "title": "Fibonacci Series",
+    "url": "https://www.hackerrank.com/challenges/fibonacci-modified/problem",
+    "platform": "hackerrank"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 3,
+  "fields": {
+    "contest": 1,
+    "title": "Graph DFS",
+    "url": "https://codeforces.com/problemset/problem/104/B",
+    "platform": "codeforces"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 4,
+  "fields": {
+    "contest": 2,
+    "title": "Build a REST API",
+    "url": "https://github.com/explore",
+    "platform": "other"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 5,
+  "fields": {
+    "contest": 3,
+    "title": "Matrix Rotation",
+    "url": "https://www.hackerrank.com/challenges/matrix-rotation-algo/problem",
+    "platform": "hackerrank"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 6,
+  "fields": {
+    "contest": 4,
+    "title": "Two Sum",
+    "url": "https://leetcode.com/problems/two-sum/",
+    "platform": "leetcode"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 7,
+  "fields": {
+    "contest": 4,
+    "title": "Fibonacci Series",
+    "url": "https://www.hackerrank.com/challenges/fibonacci-modified/problem",
+    "platform": "hackerrank"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 8,
+  "fields": {
+    "contest": 4,
+    "title": "Graph DFS",
+    "url": "https://codeforces.com/problemset/problem/104/B",
+    "platform": "codeforces"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 9,
+  "fields": {
+    "contest": 15,
+    "title": "Problem 1",
+    "url": "https://example.com/p1",
+    "platform": "other"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 10,
+  "fields": {
+    "contest": 16,
+    "title": "Problem 1",
+    "url": "https://example.com/p1",
+    "platform": "other"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 11,
+  "fields": {
+    "contest": 17,
+    "title": "Longest Palindromic Substring",
+    "url": "https://leetcode.com/problems/longest-palindromic-substring/description/",
+    "platform": "leetcode"
+  }
+},
+{
+  "model": "contests.problemlink",
+  "pk": 12,
+  "fields": {
+    "contest": 17,
+    "title": "Palindrome Number",
+    "url": "https://leetcode.com/problems/palindrome-number/description/",
+    "platform": "other"
+  }
+},
+{
+  "model": "contests.contactmessage",
+  "pk": 1,
+  "fields": {
+    "name": "Test User",
+    "email": "test@example.com",
+    "message": "This is a test message to verify saving.",
+    "created_at": "2026-03-23T16:41:04.233Z"
+  }
+},
+{
+  "model": "contests.contactmessage",
+  "pk": 2,
+  "fields": {
+    "name": "Test User",
+    "email": "test@example.com",
+    "message": "This is a test message to verify saving.",
+    "created_at": "2026-03-23T16:41:51.867Z"
+  }
+},
+{
+  "model": "contests.contactmessage",
+  "pk": 3,
+  "fields": {
+    "name": "Dipesh Raj Joshi",
+    "email": "dipeshjoshi1000@gmail.com",
+    "message": "heloo testing",
+    "created_at": "2026-03-23T16:42:41.201Z"
+  }
+},
+{
+  "model": "contests.contactmessage",
+  "pk": 4,
+  "fields": {
+    "name": "Dipesh Raj Joshi",
+    "email": "dipeshjoshi1000@gmail.com",
+    "message": "hello we are testing",
+    "created_at": "2026-03-23T16:44:11.245Z"
+  }
+},
+{
+  "model": "contests.contactmessage",
+  "pk": 5,
+  "fields": {
+    "name": "Demo User",
+    "email": "demo@example.com",
+    "message": "This is a demonstration message for the text file.",
+    "created_at": "2026-03-23T16:44:31.285Z"
+  }
+},
+{
+  "model": "contests.contactmessage",
+  "pk": 6,
+  "fields": {
+    "name": "Demo User",
+    "email": "demo@example.com",
+    "message": "This is a demonstration message for the text file.",
+    "created_at": "2026-03-23T16:45:00.573Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 1,
+  "fields": {
+    "contest": 3,
+    "participant": 2,
+    "title": "Untitled Submission",
+    "description": "",
+    "submission_type": "github",
+    "file": "",
+    "image": "",
+    "external_link": "https://github.com/participant1/winter-solution",
+    "submitted_at": "2026-03-02T15:06:06.463Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 2,
+  "fields": {
+    "contest": 3,
+    "participant": 3,
+    "title": "Untitled Submission",
+    "description": "",
+    "submission_type": "leetcode",
+    "file": "",
+    "image": "",
+    "external_link": "https://leetcode.com/problems/two-sum/submissions/",
+    "submitted_at": "2026-03-02T15:06:06.470Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 3,
+  "fields": {
+    "contest": 3,
+    "participant": 8,
+    "title": "Untitled Submission",
+    "description": "hello",
+    "submission_type": "image",
+    "file": "submissions/files/Screenshot_2026-03-04_at_12.59.09AM.png",
+    "image": "submissions/images/Screenshot_2026-03-04_at_12.59.09AM_2.png",
+    "external_link": null,
+    "submitted_at": "2026-03-06T08:48:01.479Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 4,
+  "fields": {
+    "contest": 5,
+    "participant": 15,
+    "title": "First",
+    "description": "",
+    "submission_type": "code",
+    "file": "",
+    "image": "",
+    "external_link": null,
+    "submitted_at": "2026-03-23T16:29:54.596Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 5,
+  "fields": {
+    "contest": 6,
+    "participant": 17,
+    "title": "Hack the system",
+    "description": "",
+    "submission_type": "code",
+    "file": "submissions/files/secret.txt",
+    "image": "",
+    "external_link": null,
+    "submitted_at": "2026-03-23T16:30:07.469Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 6,
+  "fields": {
+    "contest": 7,
+    "participant": 19,
+    "title": "Late",
+    "description": "",
+    "submission_type": "code",
+    "file": "submissions/files/late.txt",
+    "image": "",
+    "external_link": null,
+    "submitted_at": "2026-03-23T16:30:30.819Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 7,
+  "fields": {
+    "contest": 8,
+    "participant": 19,
+    "title": "Early",
+    "description": "",
+    "submission_type": "code",
+    "file": "submissions/files/early.txt",
+    "image": "",
+    "external_link": null,
+    "submitted_at": "2026-03-23T16:30:30.826Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 8,
+  "fields": {
+    "contest": 9,
+    "participant": 22,
+    "title": "Secret Submission",
+    "description": "",
+    "submission_type": "code",
+    "file": "",
+    "image": "",
+    "external_link": null,
+    "submitted_at": "2026-03-23T16:30:51.121Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 9,
+  "fields": {
+    "contest": 10,
+    "participant": 15,
+    "title": "First",
+    "description": "",
+    "submission_type": "code",
+    "file": "",
+    "image": "",
+    "external_link": null,
+    "submitted_at": "2026-03-23T16:32:54.203Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 10,
+  "fields": {
+    "contest": 14,
+    "participant": 22,
+    "title": "Secret Submission",
+    "description": "",
+    "submission_type": "code",
+    "file": "",
+    "image": "",
+    "external_link": null,
+    "submitted_at": "2026-03-23T16:32:56.540Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 11,
+  "fields": {
+    "contest": 15,
+    "participant": 25,
+    "title": "Final Submission",
+    "description": "Final test submission.",
+    "submission_type": "image",
+    "file": "",
+    "image": "submissions/images/DIPESH.png",
+    "external_link": "https://example.com/s1https://example.com/s1",
+    "submitted_at": "2026-03-23T17:29:40.761Z"
+  }
+},
+{
+  "model": "submissions.submission",
+  "pk": 12,
+  "fields": {
+    "contest": 17,
+    "participant": 27,
+    "title": "Untitled Submission",
+    "description": "submitted",
+    "submission_type": "image",
+    "file": "",
+    "image": "submissions/images/WhatsApp_Image_2026-02-05_at_10.56.12AM.jpeg",
+    "external_link": null,
+    "submitted_at": "2026-03-23T18:17:19.517Z"
+  }
+},
+{
+  "model": "scoring.score",
+  "pk": 1,
+  "fields": {
+    "submission": 1,
+    "judge": 4,
+    "score": 88.5,
+    "feedback": "Excellent approach. Clean code, well-documented. Minor optimization could improve runtime.",
+    "scored_at": "2026-03-02T15:06:06.472Z"
+  }
+},
+{
+  "model": "scoring.score",
+  "pk": 2,
+  "fields": {
+    "submission": 1,
+    "judge": 5,
+    "score": 91.0,
+    "feedback": "Impressive solution. Edge cases handled well.",
+    "scored_at": "2026-03-02T15:06:06.477Z"
+  }
+},
+{
+  "model": "scoring.score",
+  "pk": 3,
+  "fields": {
+    "submission": 2,
+    "judge": 4,
+    "score": 74.0,
+    "feedback": "Good attempt. Some edge cases missed. Code could be cleaner.",
+    "scored_at": "2026-03-02T15:06:06.478Z"
+  }
+},
+{
+  "model": "scoring.score",
+  "pk": 4,
+  "fields": {
+    "submission": 2,
+    "judge": 5,
+    "score": 77.5,
+    "feedback": "Decent solution, but efficiency could be improved.",
+    "scored_at": "2026-03-02T15:06:06.479Z"
+  }
+},
+{
+  "model": "scoring.score",
+  "pk": 5,
+  "fields": {
+    "submission": 8,
+    "judge": 21,
+    "score": 95.0,
+    "feedback": "Great job hacking the visibility.",
+    "scored_at": "2026-03-23T16:30:51.405Z"
+  }
+}
+]
