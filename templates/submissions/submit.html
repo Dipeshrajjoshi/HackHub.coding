@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Submit Solution - {{ contest.title }}{% endblock %}
+{% block content %}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="mb-4">
+                <a href="{% url 'contest_detail' contest.pk %}"
+                    style="color:var(--text-muted); text-decoration:none;"><i class="bi bi-arrow-left me-1"></i>Back to
+                    Contest</a>
+            </div>
+            <!-- Main submission form card -->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0"><i class="bi bi-upload me-2" style="color:var(--primary);"></i>Submit Your Solution
+                    </h4>
+                    <p style="color:var(--text-muted); font-size:0.85rem; margin-top:4px; margin-bottom:0;">{{ contest.title }}</p>
+                </div>
+                <div class="card-body">
+                    <!-- enctype is needed because we are uploading files -->
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+
+                        <!-- simple reminder for the user about the deadline -->
+                        <div class="alert alert-warning mb-4">
+                            <i class="bi bi-clock me-2"></i>
+                            <strong>Deadline:</strong> {{ contest.end_time|date:"M d, Y H:i" }} UTC
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 btn-lg rounded-pill">
+                            <i class="bi bi-send me-2"></i>Submit Solution
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- this script hides/shows fields based on the submission type (zip, image, github, etc.) -->
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const submissionTypeSelect = document.getElementById('submission_type');
+                    const fileDiv = document.getElementById('div_id_file');
+                    const imageDiv = document.getElementById('div_id_image');
+                    const linkDiv = document.getElementById('div_id_external_link');
+
+                    function updateFields() {
+                        const type = submissionTypeSelect.value;
+                        fileDiv.style.display = 'none';
+                        imageDiv.style.display = 'none';
+                        linkDiv.style.display = 'none';
+
+                        if (['code', 'document', 'zip'].includes(type)) {
+                            fileDiv.style.display = 'block';
+                        } else if (type === 'image') {
+                            imageDiv.style.display = 'block';
+                        } else if (type === 'github') {
+                            linkDiv.style.display = 'block';
+                        }
+                    }
+
+                    submissionTypeSelect.addEventListener('change', updateFields);
+                    updateFields(); // Initial call
+                });
+            </script>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Register - HackHub-Code{% endblock %}
+{% block content %}
+<div class="auth-wrapper">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card auth-card" style="max-width:560px;">
+                    <div class="card-body p-5">
+                        <div class="text-center mb-4">
+                            <h2 class="auth-title">Join HackHub-Code</h2>
+                            <p class="auth-subtitle">Choose your role and get started</p>
+                        </div>
+                        <form method="post">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                {% if field.name == 'role' %}
+                                    <fieldset class="mb-4 mt-3">
+                                        <legend class="col-form-label pt-0 fw-bold" style="color:var(--text-secondary);">Select Your Role</legend>
+                                        <div class="row g-3">
+                                            {% for radio in field %}
+                                            <div class="col-12 col-md-4">
+                                                <input class="btn-check" type="radio" name="{{ field.html_name }}" id="{{ radio.id_for_label }}" value="{{ radio.data.value }}" {% if radio.data.selected %}checked{% endif %} required>
+                                                <label class="btn btn-outline-primary w-100 h-100 d-flex flex-column align-items-center justify-content-center p-3 rounded" for="{{ radio.id_for_label }}" style="border-width:2px;">
+                                                    {% if radio.data.value == 'participant' %}
+                                                        <i class="bi bi-laptop fs-2 mb-2"></i>
+                                                    {% elif radio.data.value == 'organizer' %}
+                                                        <i class="bi bi-calendar-event fs-2 mb-2"></i>
+                                                    {% elif radio.data.value == 'judge' %}
+                                                        <i class="bi bi-award fs-2 mb-2"></i>
+                                                    {% endif %}
+                                                    <span class="fw-bold">{{ radio.choice_label }}</span>
+                                                </label>
+                                            </div>
+                                            {% endfor %}
+                                        </div>
+                                        {% if field.errors %}
+                                        <div class="text-danger small mt-1">{{ field.errors.0 }}</div>
+                                        {% endif %}
+                                    </fieldset>
+                                {% else %}
+                                    {{ field|as_crispy_field }}
+                                {% endif %}
+                            {% endfor %}
+
+
+                            <button type="submit" class="btn btn-primary w-100 btn-lg mt-4 rounded-pill">Create
+                                Account</button>
+                        </form>
+                        <p class="text-center mt-4" style="color:var(--text-muted);">
+                            Already have an account? <a href="{% url 'login' %}" style="color:var(--primary);">Sign
+                                in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

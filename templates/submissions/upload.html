@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Upload Content - HackHub{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card shadow border-0 overflow-hidden">
+                <div class="bg-primary py-3 px-4">
+                    <h4 class="mb-0 text-white fw-bold"><i class="bi bi-cloud-upload me-2"></i>Upload Your Work</h4>
+                </div>
+                <div class="card-body p-4">
+                    <p class="text-muted small mb-4">Select a contest or upload a general file. We support code,
+                        documents, and images.</p>
+
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn btn-primary rounded-pill py-2">Submit Upload</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const submissionTypeSelect = document.getElementById('submission_type');
+                    const fileDiv = document.getElementById('div_id_file');
+                    const imageDiv = document.getElementById('div_id_image');
+                    const linkDiv = document.getElementById('div_id_external_link');
+
+                    function updateFields() {
+                        const type = submissionTypeSelect.value;
+                        fileDiv.style.display = 'none';
+                        imageDiv.style.display = 'none';
+                        linkDiv.style.display = 'none';
+
+                        if (['code', 'document', 'zip'].includes(type)) {
+                            fileDiv.style.display = 'block';
+                        } else if (type === 'image') {
+                            imageDiv.style.display = 'block';
+                        } else if (type === 'github') {
+                            linkDiv.style.display = 'block';
+                        }
+                    }
+
+                    submissionTypeSelect.addEventListener('change', updateFields);
+                    updateFields(); // Initial call
+                });
+            </script>
+
+            <div class="alert alert-info mt-4 border-0 shadow-sm small">
+                <i class="bi bi-info-circle me-2"></i>
+                <strong>Note:</strong> Files are scanned for security. Maximum file size is 10MB.
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

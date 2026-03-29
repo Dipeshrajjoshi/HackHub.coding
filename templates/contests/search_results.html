@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Search Results - HACKHUB-CODE{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Search Results</h2>
+    
+    <!-- Search Form on Results Page -->
+    <form action="{% url 'search' %}" method="get" class="mb-4 bg-dark-subtle p-4 rounded shadow-sm">
+        <div class="row g-2 align-items-center">
+            <div class="col-md-5">
+                <div class="input-group">
+                    <span class="input-group-text bg-transparent border-end-0"><i class="bi bi-search text-muted"></i></span>
+                    <input name="q" value="{{ request.GET.q }}" class="form-control border-start-0 ps-0" placeholder="Search contests...">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <select name="status" class="form-select">
+                    <option value="">All Statuses</option>
+                    <option value="Active" {% if request.GET.status == 'Active' %}selected{% endif %}>Active</option>
+                    <option value="Upcoming" {% if request.GET.status == 'Upcoming' %}selected{% endif %}>Upcoming</option>
+                    <option value="Ended" {% if request.GET.status == 'Ended' %}selected{% endif %}>Ended</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary w-100 rounded-pill">Search Again</button>
+            </div>
+        </div>
+    </form>
+
+    {% if contests %}
+    <div class="row">
+        {% for contest in contests %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold text-primary">{{ contest.title }}</h5>
+                    <p class="card-text text-muted small">{{ contest.description|truncatewords:20 }}</p>
+                    <div class="mt-auto">
+                        <span class="badge bg-info text-dark mb-2">{{ contest.status }}</span>
+                        <br>
+                        <a href="{% url 'contest_detail' contest.id %}"
+                            class="btn btn-outline-primary btn-sm rounded-pill px-3">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="alert alert-light text-center py-5 shadow-sm border">
+        <i class="bi bi-search display-1 text-muted mb-3 d-block"></i>
+        <h4 class="text-muted">No contests found matching your query.</h4>
+        <p class="text-muted small">Try different keywords or browse all contests.</p>
+        <a href="/" class="btn btn-primary rounded-pill mt-3">Browse All Contests</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
