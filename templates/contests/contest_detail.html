@@ -1,0 +1,278 @@
+{% extends 'base.html' %}
+{% block title %}{{ contest.title }} - HACKHUB-CODE{% endblock %}
+{% block content %}
+
+<div class="container py-5">
+    <div class="row g-4">
+        <!-- Main Column: rules, description, and problem links -->
+        <div class="col-lg-8">
+            <div class="mb-3">
+                <a href="/" class="text-decoration-none" style="color:var(--text-muted);"><i
+                        class="bi bi-arrow-left me-1"></i>Back to Contests</a>
+            </div>
+            <div class="d-flex align-items-center gap-3 mb-3">
+                {% with status=contest.status %}
+                <span class="status-badge status-{{ status|lower }}">
+                    <span class="status-dot"></span>{{ status }}
+                </span>
+                {% endwith %}
+                <span style="color:var(--text-muted); font-size:0.85rem;">Organized by <strong>{{ contest.created_by.username }}</strong></span>
+            </div>
+            <h1 style="font-weight:800; font-size:2.2rem; letter-spacing:-0.5px;">{{ contest.title }}</h1>
+
+            <!-- The what and why of the contest -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-file-text me-2"></i>Description</h5>
+                </div>
+                <div class="card-body" style="color:var(--text-secondary); line-height:1.8;">
+                    {{ contest.description|linebreaks }}
+                </div>
+            </div>
+
+            <!-- Detailed instructions for participants -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-shield-check me-2"></i>Rules</h5>
+                </div>
+                <div class="card-body" style="color:var(--text-secondary); line-height:1.8;">
+                    {{ contest.rules|linebreaks }}
+                </div>
+            </div>
+
+            <!-- Links to the actual coding problems on LeetCode/HackerRank -->
+            {% if problem_links %}
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0"><i class="bi bi-puzzle me-2"></i>Problems</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush">
+                        {% for link in problem_links %}
+                        <a href="{{ link.url }}" target="_blank"
+                            class="list-group-item list-group-item-action d-flex align-items-center gap-3"
+                            style="background:transparent; border-color:var(--border-light); color:var(--text-primary);">
+                            <span class="platform-badge platform-{{ link.platform }}">{{ link.get_platform_display }}</span>
+                            <span style="font-weight:500;">{{ link.title }}</span>
+                            <i class="bi bi-arrow-up-right ms-auto" style="color:var(--text-muted);"></i>
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Special controls that only the contest owner can see -->
+            {% if user.is_authenticated and user.role == 'organizer' and contest.created_by == user %}
+            <div class="card border"
+                style="border-color:rgba(245,158,11,0.3) !important; background:rgba(245,158,11,0.05);">
+                <div class="card-body">
+                    <h6 style="color:var(--organizer);"><i class="bi bi-gear me-2"></i>Organizer Controls</h6>
+                    <div class="d-flex gap-2 flex-wrap mt-2">
+                        {% if not contest.is_expired %}
+                        <a href="{% url 'edit_contest' contest.pk %}" class="btn btn-sm btn-outline-primary"><i class="bi bi-pencil me-1"></i>Edit</a>
+                        {% endif %}
+                        {% if not contest.is_published %}
+                        <a href="{% url 'publish_contest' contest.pk %}" class="btn btn-sm btn-success"><i
+                                class="bi bi-broadcast me-1"></i>Publish</a>
+                        {% endif %}
+                        <a href="{% url 'delete_contest' contest.pk %}" class="btn btn-sm btn-outline-danger"><i class="bi bi-trash me-1"></i>Delete</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- Sidebar: Timer, metadata, and the big submission button -->
+        <div class="col-lg-4">
+            <!-- Countdown Timer - using JS to tick down the seconds -->
+            <div class="countdown-wrapper mb-4" id="countdown-container">
+                {% if contest.is_active %}
+                <p class="countdown-title"><i class="bi bi-clock-history me-1"></i>Time Remaining</p>
+                <div class="countdown-boxes">
+                    <div class="countdown-box">
+                        <div class="countdown-num" id="cd-days">--</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-num" id="cd-hours">--</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-num" id="cd-mins">--</div>
+                        <div class="countdown-label">Mins</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-num" id="cd-secs">--</div>
+                        <div class="countdown-label">Secs</div>
+                    </div>
+                </div>
+                {% elif contest.is_upcoming %}
+                <p class="countdown-title"><i class="bi bi-hourglass me-1"></i>Starts In</p>
+                <div class="countdown-boxes">
+                    <div class="countdown-box">
+                        <div class="countdown-num" id="cd-days">--</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-num" id="cd-hours">--</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-num" id="cd-mins">--</div>
+                        <div class="countdown-label">Mins</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div class="countdown-num" id="cd-secs">--</div>
+                        <div class="countdown-label">Secs</div>
+                    </div>
+                </div>
+                {% else %}
+                <p class="countdown-expired"><i class="bi bi-x-circle me-2"></i>Contest Ended</p>
+                {% endif %}
+            </div>
+
+            <!-- Key contest dates -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h6 class="mb-3"
+                        style="color:var(--text-muted); text-transform:uppercase; letter-spacing:0.5px; font-size:0.78rem;">
+                        Contest Info</h6>
+                    <div class="d-flex flex-column gap-3 mt-3">
+                        <div>
+                            <div style="color:var(--text-muted); font-size:0.8rem;"><i
+                                    class="bi bi-calendar-event me-1"></i>Starts</div>
+                            <div style="font-weight:500; font-size:0.9rem;">{{ contest.start_time|date:"M d, Y - H:i" }}
+                                UTC</div>
+                        </div>
+                        <div>
+                            <div style="color:var(--text-muted); font-size:0.8rem;"><i
+                                    class="bi bi-calendar-x me-1"></i>Ends</div>
+                            <div style="font-weight:500; font-size:0.9rem;">{{ contest.end_time|date:"M d, Y - H:i" }}
+                                UTC</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The box for submitting work or viewing previous submission -->
+            {% if user.is_authenticated %}
+            {% if user.role == 'participant' %}
+            {% if user_submission %}
+            <div class="card" style="border-color:rgba(0,212,170,0.3); background:rgba(0,212,170,0.05);">
+                <div class="card-body text-center">
+                    <i class="bi bi-check-circle-fill text-accent fs-2"></i>
+                    <h6 class="mt-2" style="color:var(--accent);">Submitted!</h6>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">{{ user_submission.submitted_at|date:"M d, Y
+166:
+                        H:i" }} UTC</p>
+                    <a href="{% url 'submission_confirmation' user_submission.pk %}"
+                        class="btn btn-sm btn-outline-light">View Details</a>
+                    
+                    {% if user_submission.image %}
+                    <div class="mt-3 text-center">
+                        <img src="{{ user_submission.image.url }}" class="img-fluid rounded border border-secondary" style="max-height:120px; width:auto;" alt="Submission Preview">
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            {% elif contest.is_active %}
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="bi bi-upload fs-2" style="color:var(--primary);"></i>
+                    <h6 class="mt-2">Submit Your Solution</h6>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">Contest is live! Upload your ZIP or share a
+                        link.</p>
+                    <a href="{% url 'submit' contest.pk %}" class="btn btn-accent w-100">
+                        <i class="bi bi-upload me-2"></i>Submit Now
+                    </a>
+                </div>
+            </div>
+            {% elif contest.is_expired %}
+            <div class="card" style="opacity:0.7;">
+                <div class="card-body text-center">
+                    <i class="bi bi-lock fs-2" style="color:var(--text-muted);"></i>
+                    <h6 class="mt-2" style="color:var(--text-muted);">Submissions Closed</h6>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">The contest has ended.</p>
+                </div>
+            </div>
+            {% else %}
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="bi bi-hourglass-split fs-2" style="color:var(--text-muted);"></i>
+                    <h6 class="mt-2" style="color:var(--text-muted);">Not Started Yet</h6>
+                    <p style="color:var(--text-muted); font-size:0.85rem;">Wait for the contest to begin.</p>
+                </div>
+            </div>
+            {% endif %}
+            {% elif user.role == 'judge' %}
+            <div class="card" style="border-color:rgba(0,212,170,0.3);">
+                <div class="card-body text-center">
+                    <i class="bi bi-clipboard-check fs-2 text-accent"></i>
+                    <h6 class="mt-2 text-accent">Judge View</h6>
+                    <a href="{% url 'judge_contest_submissions' contest.pk %}"
+                        class="btn btn-outline-light btn-sm mt-2 w-100">View Submissions</a>
+                </div>
+            </div>
+            {% endif %}
+            {% else %}
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="bi bi-person-lock fs-2" style="color:var(--text-muted);"></i>
+                    <h6 class="mt-2">Join HACKHUB-CODE</h6>
+                    <a href="{% url 'login' %}?next={% url 'contest_detail' contest.pk %}"
+                        class="btn btn-accent w-100 mt-2">Login to Participate</a>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- Link to see how everyone else is doing -->
+            <div class="mt-3">
+                <a href="{% url 'leaderboard' contest.pk %}" class="btn btn-outline-light w-100">
+                    <i class="bi bi-trophy me-2"></i>View Leaderboard
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+<!-- This JS handles the live ticking clock for the contest end/start time -->
+{% block extra_js %}
+<script>
+    const endTime = new Date("{{ contest.end_time|date:'c' }}").getTime();
+    const startTime = new Date("{{ contest.start_time|date:'c' }}").getTime();
+    const isActive = "{{ contest.is_active|yesno:'true,false' }}" === "true";
+    const isUpcoming = "{{ contest.is_upcoming|yesno:'true,false' }}" === "true";
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const target = isUpcoming ? startTime : endTime;
+        const diff = target - now;
+
+        if (diff <= 0) {
+            window.location.reload();
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        const pad = n => String(n).padStart(2, '0');
+        if (document.getElementById('cd-days')) {
+            document.getElementById('cd-days').textContent = pad(days);
+            document.getElementById('cd-hours').textContent = pad(hours);
+            document.getElementById('cd-mins').textContent = pad(mins);
+            document.getElementById('cd-secs').textContent = pad(secs);
+        }
+    }
+
+    if (isActive || isUpcoming) {
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    }
+</script>
+{% endblock %}

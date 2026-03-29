@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% block title %}Leaderboard - {{ contest.title }}{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="mb-3">
+        <a href="{% url 'contest_detail' contest.pk %}" style="color:var(--text-muted); text-decoration:none;"><i
+                class="bi bi-arrow-left me-1"></i>Back to Contest</a>
+    </div>
+    <div class="d-flex align-items-center gap-3 mb-2">
+        <span style="font-size:2rem;"><i class="bi bi-trophy"></i></span>
+        <div>
+            <h1 style="font-weight:800; margin:0;">Leaderboard</h1>
+            <p style="color:var(--text-muted); margin:0;">{{ contest.title }}</p>
+        </div>
+    </div>
+
+    {% if leaderboard_data %}
+    <div class="card mt-4 p-0" style="overflow:hidden;">
+        <table class="table mb-0">
+            <thead>
+                <tr>
+                    <th style="width:60px;">Rank</th>
+                    <th>Participant</th>
+                    <th>Avg Score</th>
+                    <th>Judges</th>
+                    <th>Submitted At</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in leaderboard_data %}
+                <tr
+                    class="{% if entry.rank == 1 %}rank-1{% elif entry.rank == 2 %}rank-2{% elif entry.rank == 3 %}rank-3{% endif %}">
+                    <td class="text-center">
+                        {% if entry.rank == 1 %}<span class="rank-badge">1st</span>
+                        {% elif entry.rank == 2 %}<span class="rank-badge">2nd</span>
+                        {% elif entry.rank == 3 %}<span class="rank-badge">3rd</span>
+                        {% else %}<span style="color:var(--text-muted); font-weight:700;">#{{ entry.rank }}</span>
+                        {% endif %}
+                    </td>
+                    <td>
+                        <span style="font-weight:700;">{{ entry.submission.participant.username }}</span>
+                        {% if entry.submission.participant.first_name %}
+                        <br><small style="color:var(--text-muted);">{{ entry.submission.participant.first_name }} {{ entry.submission.participant.last_name }}</small>
+                        {% endif %}
+                    </td>
+                    <td>
+                        {% if entry.avg_score is not None %}
+                        <div>
+                            <span class="mono" style="color:var(--accent); font-size:1.1rem; font-weight:700;">{{ entry.avg_score }}</span>
+                            <span style="color:var(--text-muted); font-size:0.8rem;"> / 100</span>
+                        </div>
+                        <div class="score-bar-container mt-1" style="max-width:120px;">
+                            <div class="score-bar" style="width:{{ entry.avg_score }}%;"></div>
+                        </div>
+                        {% else %}
+                        <span class="badge"
+                            style="background:rgba(245,158,11,0.15); color:var(--organizer);">Pending</span>
+                        {% endif %}
+                    </td>
+                    <td style="color:var(--text-muted);">{{ entry.score_count }}</td>
+                    <td style="color:var(--text-muted); font-size:0.85rem;">{{ entry.submission.submitted_at|date:"M d, H:i" }} UTC</td>
+                    <td>
+                        <span class="sub-type-badge sub-{{ entry.submission.submission_type }}">
+                            {{ entry.submission.get_submission_type_display }}
+                        </span>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="empty-state mt-4">
+        <div class="empty-state-icon"><i class="bi bi-trophy"></i></div>
+        <h4>No submissions yet</h4>
+        <p>The leaderboard will appear once participants submit their solutions.</p>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
