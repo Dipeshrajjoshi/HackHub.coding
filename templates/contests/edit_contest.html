@@ -1,0 +1,136 @@
+{% extends 'base.html' %}
+{% block title %}Edit Contest - {{ contest.title }}{% endblock %}
+{% block content %}
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="page-header">
+                <h1><i class="bi bi-pencil me-2" style="color:var(--organizer);"></i>Edit Contest</h1>
+                <p style="color:var(--text-muted);">{{ contest.title }}</p>
+            </div>
+            <form method="post">
+                {% csrf_token %}
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Contest Details</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3"><label class="form-label">Title</label>{{ form.title }}</div>
+                        <div class="mb-3"><label class="form-label">Description</label>{{ form.description }}</div>
+                        <div class="mb-3"><label class="form-label">Rules</label>{{ form.rules }}</div>
+                        <div class="row g-3">
+                            <div class="col-md-6"><label class="form-label">Start Time</label>{{ form.start_time }}
+                            </div>
+                            <div class="col-md-6"><label class="form-label">End Time</label>{{ form.end_time }}</div>
+                        </div>
+                        {% if form.errors %}
+                        <div class="alert alert-danger mt-3">
+                            {% for field in form %}{% for error in field.errors %}<div>{{ field.label }}: {{ error }}
+                            </div>{% endfor %}{% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0"><i class="bi bi-puzzle me-2"></i>Problem Links</h5>
+                        <button type="button" class="btn btn-sm btn-outline-primary" id="add-problem-btn">
+                            <i class="bi bi-plus-lg me-1"></i>Add Another
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        {{ formset.management_form }}
+                        
+                        {% if formset.non_form_errors %}
+                        <div class="alert alert-danger mb-3">
+                            {% for error in formset.non_form_errors %}{{ error }}{% endfor %}
+                        </div>
+                        {% endif %}
+
+                        <div id="formset-container">
+                            {% for f in formset %}
+                            <div class="formset-row mb-4 pb-3 border-bottom border-secondary-subtle">
+                                {% for hidden in f.hidden_fields %}{{ hidden }}{% endfor %}
+                                <div class="row g-3">
+                                    <div class="col-md-5">
+                                        <label class="form-label">Title</label>
+                                        {{ f.title }}
+                                        {% if f.title.errors %}<div class="text-danger small">{{ f.title.errors.0 }}</div>{% endif %}
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label class="form-label">URL</label>
+                                        {{ f.url }}
+                                        {% if f.url.errors %}<div class="text-danger small">{{ f.url.errors.0 }}</div>{% endif %}
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Platform</label>
+                                        {{ f.platform }}
+                                    </div>
+                                </div>
+                                {% if formset.can_delete and f.instance.pk %}
+                                <div class="mt-2 text-end">
+                                    <div class="form-check form-check-inline">
+                                        {{ f.DELETE }}
+                                        <label class="form-check-label text-danger small" for="{{ f.DELETE.id_for_label }}">Delete this problem</label>
+                                    </div>
+                                </div>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                         <!-- Empty form template for JavaScript -->
+                         <div id="empty-form" class="d-none">
+                            <div class="formset-row mb-4 pb-3 border-bottom border-secondary-subtle">
+                                {% for hidden in formset.empty_form.hidden_fields %}{{ hidden }}{% endfor %}
+                                <div class="row g-3">
+                                    <div class="col-md-5">
+                                        <label class="form-label">Title</label>
+                                        {{ formset.empty_form.title }}
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label class="form-label">URL</label>
+                                        {{ formset.empty_form.url }}
+                                    </div>
+                                    <div class="col-md-2">
+                                        <label class="form-label">Platform</label>
+                                        {{ formset.empty_form.platform }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex gap-3">
+                    <button type="submit" class="btn btn-accent btn-lg px-5"><i class="bi bi-check-lg me-2"></i>Save Changes</button>
+                    <a href="{% url 'contest_detail' contest.pk %}" class="btn btn-outline-light btn-lg">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const addBtn = document.getElementById('add-problem-btn');
+    const container = document.getElementById('formset-container');
+    const totalForms = document.getElementById('id_problem_links-TOTAL_FORMS');
+    const emptyForm = document.getElementById('empty-form').innerHTML;
+
+    if (addBtn) {
+        addBtn.addEventListener('click', function() {
+            const currentCount = parseInt(totalForms.value);
+            const newFormHtml = emptyForm.replace(/__prefix__/g, currentCount);
+            
+            const div = document.createElement('div');
+            div.innerHTML = newFormHtml;
+            container.appendChild(div.firstElementChild);
+            
+            totalForms.value = currentCount + 1;
+        });
+    }
+});
+</script>
+{% endblock %}
+{% endblock %}
