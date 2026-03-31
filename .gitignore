@@ -41,3 +41,5 @@ logs/
 
 # Environment Variables
 .env
+HackHub_Project_Description.docx
+generate_docs.py

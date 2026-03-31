@@ -9,10 +9,14 @@ import os
 # helper to make sure users don't upload weird files (like .exe)
 def validate_file_extension(value):
     ext = os.path.splitext(value.name)[1]
-    # we only allow these common formats for safety and sanity
-    valid_extensions = ['.zip', '.pdf', '.doc', '.docx', '.png', '.jpg', '.jpeg']
+    # we allow common document, image, and source code formats
+    valid_extensions = [
+        '.zip', '.pdf', '.doc', '.docx', 
+        '.png', '.jpg', '.jpeg',
+        '.py', '.js', '.java', '.cpp', '.c', '.h', '.html', '.css', '.ts', '.go', '.rs', '.php', '.rb'
+    ]
     if not ext.lower() in valid_extensions:
-        raise ValidationError('Unsupported file extension. Please upload ZIP, PDF, DOC, PNG, or JPG.')
+        raise ValidationError(f'Unsupported file extension ({ext}). Please upload ZIP, PDF, or common source code files.')
 
 
 # checking the file size so we don't crash the server with huge uploads
